@@ -41,15 +41,15 @@ class CoursesController extends Controller
     {
         //
         $request->validate([
-            'title'=>'required',
-            'content'=>'required'
+            'course_name'=>'required',
+            'course_code'=>'required'
         ]);
 
-        $contact = new Contact([
-            'title' => $request->get('title'),
-            'content' => $request->get('content')
+        $courses = new Courses([
+            'course_name' => $request->get('course_name'),
+            'course_code' => $request->get('course_name')
         ]);
-        $contact->save();
+        $courses->save();
         return redirect('/courses')->with('success', 'Content created!');
     }
 
@@ -88,13 +88,13 @@ class CoursesController extends Controller
     {
         //
         $request->validate([
-            'title'=>'required',
-            'content'=>'required'
+            'course_name'=>'required',
+            'course_code'=>'required'
         ]);
 
         $courses = Courses::find($id);
-        $courses->title =  $request->get('title');
-        $courses->content = $request->get('content');
+        $courses->title =  $request->get('course_name');
+        $courses->content = $request->get('course_code');
         $courses->save();
 
         return redirect('/courses')->with('success', 'Content updated!');
