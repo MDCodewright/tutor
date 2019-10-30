@@ -206,7 +206,7 @@
             </ol>
         </section>
         <br>
-        <div class="col-sm-4">
+        <div class="col-sm-3">
             <div class="container">
                     <div class="row">
                         <div class="col-sm-4 col-md-3 sidebar">
@@ -241,7 +241,7 @@
             </div>
         </div>
 
-        <div class="col-sm-8">
+        <div class="col-sm-9">
             @yield('content')
         </div>
         <!-- /.content -->
