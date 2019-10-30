@@ -30,4 +30,8 @@ class TutorController extends Controller
         return view('tutorcourses', compact('assignments','announcements'));
       
     }
+    public function home_courses()
+    {
+        return view('home_courses');
+    }
 }

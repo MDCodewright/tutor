@@ -22,6 +22,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/student', 'StudentController@student')->name('student');
     Route::get('/modules', 'TutorController@modules')->name('modules');
     Route::get('/tutorcourses', 'TutorController@tutorcourses')->name('tutorcourses');
+    Route::get('/home_courses', 'TutorController@home_courses')->name('home_courses');
 
     Route::get('/home', 'HomeController@index')->name('home');
     Route::get('/message/{id}', 'HomeController@getMessage')->name('message');
