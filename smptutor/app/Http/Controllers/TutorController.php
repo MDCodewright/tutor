@@ -40,5 +40,7 @@ class TutorController extends Controller
     }
     public function coursemodules()
     {   
+        $coursemodules = DB::select('select * from modules');
+        return view('coursemodules',compact('coursemodules'));
     }
 }
