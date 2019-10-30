@@ -205,7 +205,45 @@
                 <li class="active">Students</li>
             </ol>
         </section>
+        <br> 
+        <div class="col-sm-3">
+            <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4 col-md-3 sidebar">
+                            <div class="mini-submenu">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </div>
+                            <div class="list-group">
+                                <span href="#" class="list-group-item active">
+                                    Content
+                                    <span class="pull-right" id="slide-submenu">
+                                        <i class="fa fa-times"></i>
+                                    </span>
+                                </span>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-comment-o"></i> Home
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-search"></i> Assignments
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-user"></i> Modules
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-folder-open-o"></i> Progress
+                                    <span class="badge">14%</span>
+                                </a>
+                            </div>        
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <div class="col-sm-9">
             @yield('content')
+        </div>
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->

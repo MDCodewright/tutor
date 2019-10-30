@@ -1,4 +1,4 @@
-@extends('layouts.modulesdash')
+@extends('layouts.coursesdashboard')
 
 @section('content')
 
@@ -11,7 +11,6 @@
     padding: 9px;  
     /*position: relative;*/
     width: 42px;
-
     }
 
     .mini-submenu:hover{
