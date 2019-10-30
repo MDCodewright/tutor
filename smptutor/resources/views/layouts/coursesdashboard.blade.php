@@ -315,15 +315,14 @@
                                     <a href="{{ route('home_courses')}}" class="list-group-item">
                                         <i class="fa fa-comment-o"></i> Home
                                     </a>
-                                    <a href="#" class="list-group-item">
+                                    <a href="{{route('assignments')}}" class="list-group-item">
                                         <i class="fa fa-search"></i> Assignments
                                     </a>
-                                    <a href="{{ route('tutorcourses')}}" class="list-group-item">
+                                    <a href="{{ route('coursemodules')}}" class="list-group-item">
                                         <i class="fa fa-user"></i> Modules
                                     </a>
-                                    <a href="#" class="list-group-item">
-                                        <i class="fa fa-folder-open-o"></i> Progress
-                                        <span class="badge">14%</span>
+                                    <a href="{{ route('announcements')}}" class="list-group-item">
+                                        <i class="fa fa-folder-open-o"></i> Announcements
                                     </a>
                                 </div>        
                             </div>
