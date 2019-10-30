@@ -21,4 +21,8 @@ class TutorController extends Controller
     {
         return view('modules');
     }
+    public function tutorcourses()
+    {
+        return view('tutorcourses');
+    }
 }
