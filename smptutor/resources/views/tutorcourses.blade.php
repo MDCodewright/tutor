@@ -20,12 +20,11 @@
                 <!-- /.box-tools -->
               </div>
               <!-- /.box-header -->
+              @foreach($assignments as $assignment)
               <div class="box-body">
-                <a href="#">Assignment 1</a>
+                <a href="#">{{$assignment->assignment_title}}</a>
               </div>
-              <div class="box-body">
-                <a href="#">Assignment 2</a>
-              </div>
+              @endforeach
               <!-- /.box-body -->
             </div>
             <!-- /.box -->
@@ -44,12 +43,11 @@
                 <!-- /.box-tools -->
               </div>
               <!-- /.box-header -->
+              @foreach($announcements as $announcement)
               <div class="box-body">
-                <a href="#">Announcement 1</a>
+                <a href="#">{{$announcement->content}} 1</a>
               </div>
-              <div class="box-body">
-                <a href="#">Announcement 2</a>
-              </div>
+              @endforeach
               <!-- /.box-body -->
             </div>
             <!-- /.box -->

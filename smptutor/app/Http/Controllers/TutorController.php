@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+Use DB;
 
 class TutorController extends Controller
 {
@@ -19,11 +20,15 @@ class TutorController extends Controller
 
     public function modules()
     {
-        return view('modules');
+        $modules = DB::select('select * from courses');
+        return view('modules', compact('modules'));
     }
     public function tutorcourses()
     {
-        return view('tutorcourses');
+        $assignments = DB::select('select * from assignments');
+        $announcements = DB::select('select * from announcements');
+        return view('tutorcourses', compact('assignments','announcements'));
+      
     }
     public function home_courses()
     {
