@@ -228,7 +228,7 @@
                                 <a href="#" class="list-group-item">
                                     <i class="fa fa-search"></i> Assignments
                                 </a>
-                                <a href="#" class="list-group-item">
+                                <a href="{{ route('tutorcourses')}}" class="list-group-item">
                                     <i class="fa fa-user"></i> Modules
                                 </a>
                                 <a href="#" class="list-group-item">
