@@ -206,7 +206,7 @@
             </ol>
         </section>
         <br> 
-        <div class="col-sm-3">
+        <div class="col-sm-3" id="miniDiv">
             <div class="container">
                     <div class="row">
                         <div class="col-sm-4 col-md-3 sidebar">
@@ -241,7 +241,7 @@
             </div>
         </div>
 
-        <div class="col-sm-9">
+        <div class="col-sm-9" id="mainDiv">
             @yield('content')
         </div>
         <!-- /.content -->
@@ -317,7 +317,9 @@
         $(function(){
             $('#slide-submenu').on('click',function() {			        
                 $(this).closest('.list-group').fadeOut('slide',function(){
-                    $('.mini-submenu').fadeIn();	
+                    $('.mini-submenu').fadeIn();
+                    $('#miniDiv').attr("class", "col-sm-1");	
+                    $('#mainDiv').attr("class", "col-sm-11");
                 });
                 
             });
@@ -325,6 +327,8 @@
             $('.mini-submenu').on('click',function(){		
                 $(this).next('.list-group').toggle('slide');
                 $('.mini-submenu').hide();
+                $('#miniDiv').attr("class", "col-sm-3");	
+                $('#mainDiv').attr("class", "col-sm-9");
             })
         })
 
