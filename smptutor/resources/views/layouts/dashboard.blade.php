@@ -172,7 +172,7 @@
                 </li>
                 <li>
                     <a href="{{ route('modules') }}">
-                        <i class="fa fa-th"></i> <span>Modules</span>
+                        <i class="fa fa-th"></i> <span>Courses</span>
                     </a>
                 </li>
                 <li>
