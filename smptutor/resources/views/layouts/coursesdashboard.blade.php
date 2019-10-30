@@ -40,6 +40,62 @@
 
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+<style>
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    div.mini-submenu{
+        display:block;
+    }
+    div.list-group{
+        display:none;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    div.mini-submenu{
+        display:block;
+    }
+    div.list-group{
+        display:none;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    div.mini-submenu{
+        display:none;
+    }
+    div.list-group{
+        display:block;
+    }
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    div.mini-submenu{
+        display:none;
+    }
+    div.list-group{
+        display:block;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    div.mini-submenu{
+        display:none;
+    }
+    div.list-group{
+        display:block;
+    }
+
+}
+
+
+</style>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
