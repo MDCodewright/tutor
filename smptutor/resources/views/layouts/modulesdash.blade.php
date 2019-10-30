@@ -19,8 +19,8 @@
     <link rel="stylesheet" href="{{ asset('public/dist/css/AdminLTE.min.css') }}">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
-
-
+    <link rel="stylesheet" href="{{ asset('public/js/sidebar.js') }}">
+    
     <link rel="stylesheet" href="{{ asset('public/dist/css/skins/_all-skins.min.css') }}">
     <!-- Morris chart -->
     <link rel="stylesheet" href="{{ asset('public/bower_components/morris.js/morris.css') }}">
@@ -190,10 +190,60 @@
         <!-- /.sidebar -->
     </aside>
 
+    
+
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
-        @yield('content')
+        <section class="content-header">
+            <h1>
+                Modules
+                <small>List of courses</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li class="active">Students</li>
+            </ol>
+        </section>
+        <br>
+        <div class="col-sm-4">
+            <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4 col-md-3 sidebar">
+                            <div class="mini-submenu">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </div>
+                            <div class="list-group">
+                                <span href="#" class="list-group-item active">
+                                    Content
+                                    <span class="pull-right" id="slide-submenu">
+                                        <i class="fa fa-times"></i>
+                                    </span>
+                                </span>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-comment-o"></i> Home
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-search"></i> Assignments
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-user"></i> Modules
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-folder-open-o"></i> Progress
+                                    <span class="badge">14%</span>
+                                </a>
+                            </div>        
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <div class="col-sm-8">
+            @yield('content')
+        </div>
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
@@ -263,6 +313,21 @@
                 'autoWidth'   : false
             })
         })
+
+        $(function(){
+            $('#slide-submenu').on('click',function() {			        
+                $(this).closest('.list-group').fadeOut('slide',function(){
+                    $('.mini-submenu').fadeIn();	
+                });
+                
+            });
+
+            $('.mini-submenu').on('click',function(){		
+                $(this).next('.list-group').toggle('slide');
+                $('.mini-submenu').hide();
+            })
+        })
+
 </script>
 
 </body>
