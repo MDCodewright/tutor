@@ -25,4 +25,8 @@ class TutorController extends Controller
     {
         return view('tutorcourses');
     }
+    public function home_courses()
+    {
+        return view('home_courses');
+    }
 }

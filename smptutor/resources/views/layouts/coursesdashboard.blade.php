@@ -42,6 +42,40 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 <style>
 
+.mini-submenu{
+    display:none;  
+    background-color: rgba(0, 0, 0, 0);  
+    border: 1px solid rgba(0, 0, 0, 0.9);
+    border-radius: 4px;
+    padding: 9px;  
+    /*position: relative;*/
+    width: 42px;
+    }
+
+    .mini-submenu:hover{
+    cursor: pointer;
+    }
+
+    .mini-submenu .icon-bar {
+    border-radius: 1px;
+    display: block;
+    height: 2px;
+    width: 22px;
+    margin-top: 3px;
+    }
+
+    .mini-submenu .icon-bar {
+    background-color: #000;
+    }
+
+    #slide-submenu{
+    background: rgba(0, 0, 0, 0.45);
+    display: inline-block;
+    padding: 0 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    }
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     div.mini-submenu{
@@ -261,41 +295,42 @@
                 <li class="active">Students</li>
             </ol>
         </section>
-        <br> 
-        <div class="col-sm-3" id="miniDiv">
-            <div class="container">
-                    <div class="row">
-                        <div class="col-sm-4 col-md-3 sidebar">
-                            <div class="mini-submenu">
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </div>
-                            <div class="list-group">
-                                <span href="#" class="list-group-item active">
-                                    Content
-                                    <span class="pull-right" id="slide-submenu">
-                                        <i class="fa fa-times"></i>
+        <br>
+            <div class="col-sm-3" id="miniDiv">
+                <div class="container">
+                        <div class="row">
+                            <div class="col-sm-4 col-md-3 sidebar">
+                                <div class="mini-submenu">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </div>
+                                <div class="list-group">
+                                    <span href="#" class="list-group-item active">
+                                        Content
+                                        <span class="pull-right" id="slide-submenu">
+                                            <i class="fa fa-times"></i>
+                                        </span>
                                     </span>
-                                </span>
-                                <a href="#" class="list-group-item">
-                                    <i class="fa fa-comment-o"></i> Home
-                                </a>
-                                <a href="#" class="list-group-item">
-                                    <i class="fa fa-search"></i> Assignments
-                                </a>
-                                <a href="{{ route('tutorcourses')}}" class="list-group-item">
-                                    <i class="fa fa-user"></i> Modules
-                                </a>
-                                <a href="#" class="list-group-item">
-                                    <i class="fa fa-folder-open-o"></i> Progress
-                                    <span class="badge">14%</span>
-                                </a>
-                            </div>        
+                                    <a href="{{ route('home_courses')}}" class="list-group-item">
+                                        <i class="fa fa-comment-o"></i> Home
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <i class="fa fa-search"></i> Assignments
+                                    </a>
+                                    <a href="{{ route('tutorcourses')}}" class="list-group-item">
+                                        <i class="fa fa-user"></i> Modules
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <i class="fa fa-folder-open-o"></i> Progress
+                                        <span class="badge">14%</span>
+                                    </a>
+                                </div>        
+                            </div>
                         </div>
-                    </div>
+                </div>
             </div>
-        </div>
+        
 
         <div class="col-sm-9" id="mainDiv">
             @yield('content')
